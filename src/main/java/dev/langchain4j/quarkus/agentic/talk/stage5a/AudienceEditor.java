@@ -8,10 +8,10 @@ public interface AudienceEditor {
 
     @UserMessage("""
             You are a professional editor.
-            Analyze and rewrite the following story to better align with the target audience of {{audience}}.
+            Analyze and rewrite the following story to better align with the target audience of {audience}.
             Return only the story and nothing else.
-            The story is "{{story}}".
+            The story is "{story}".
             """)
     @Agent("Edit a story to better fit a given audience")
-    String editStoryForAudience(@V("story") String story, @V("audience") String audience);
+    String editStoryForAudience(String story, String audience);
 }

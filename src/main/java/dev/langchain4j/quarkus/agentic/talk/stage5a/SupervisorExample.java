@@ -15,7 +15,7 @@ public class SupervisorExample implements QuarkusApplication {
     SupervisorStoryCreator supervisorStoryCreator;
 
     @Override
-    public int run(String... args) throws IOException {
+    public int run(String... args) {
         String topic = "dragons and wizards";
         String style = "fantasy";
         String audience = "young adults";
@@ -23,7 +23,7 @@ public class SupervisorExample implements QuarkusApplication {
         Log.infof("Generate a novel about %s in style %s and for %s audience", topic, style, audience);
         String novel = supervisorStoryCreator.write(topic, style, audience);
 
-        Log.infof("Final novel: %s", novel);
+        Log.infof("Final novel: \n----------\n%s\n ----------",  novel);
 
         return 0;
     }

@@ -21,7 +21,7 @@ public class PromptChainingExample implements QuarkusApplication {
     AudienceEditor audienceEditor;
 
     @Override
-    public int run(String... args) throws IOException {
+    public int run(String... args) {
         String topic = "dragons and wizards";
         String style = "fantasy";
         String audience = "young adults";
@@ -32,7 +32,7 @@ public class PromptChainingExample implements QuarkusApplication {
         novel = styleEditor.editNovel(novel, style);
         Log.infof("Novel in style %s: %s", style, novel);
         novel = audienceEditor.editNovel(novel, audience);
-        Log.infof("Final novel: %s", novel);
+        Log.infof("Final novel: \n----------\n%s\n ----------",  novel);
 
         return 0;
     }

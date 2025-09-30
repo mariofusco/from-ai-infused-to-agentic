@@ -15,14 +15,14 @@ public class SupervisorWithWorkflowExample implements QuarkusApplication {
     SupervisorStoryCreator supervisorStoryCreator;
 
     @Override
-    public int run(String... args) throws IOException {
+    public int run(String... args) {
         String topic = "dragons and wizards";
         String style = "comedy";
 
         Log.infof("Generate a novel about %s in style %s", topic, style);
         String novel = supervisorStoryCreator.write(topic, style);
 
-        Log.infof("Final novel: %s", novel);
+        Log.infof("Final novel: \n----------\n%s\n ----------",  novel);
 
         return 0;
     }

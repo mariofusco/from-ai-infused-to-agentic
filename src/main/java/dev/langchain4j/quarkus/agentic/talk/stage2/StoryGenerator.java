@@ -8,7 +8,7 @@ import io.quarkiverse.langchain4j.ToolBox;
 public interface StoryGenerator {
     @UserMessage("""
      Write a short story about {topic} for a {audience} in a {style} style.
-     Makes sure you use the given tools to write the story and adapt it to the 
+     Makes sure you use the given tools to write the story and adapt it to the
      audience and style.
      """)
     @ToolBox({CreativeWriter.class, StyleEditor.class, AudienceEditor.class})
