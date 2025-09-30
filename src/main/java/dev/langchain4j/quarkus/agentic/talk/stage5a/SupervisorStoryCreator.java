@@ -13,10 +13,10 @@ public interface SupervisorStoryCreator {
             @SubAgent(type = AudienceEditor.class, outputName = "story"),
             @SubAgent(type = StyleEditor.class, outputName = "story")
     })
-    String write(@V("topic") String topic, @V("audience") String audience, @V("style") String style);
+    String write(String topic,String audience,String style);
 
     @SupervisorRequest
-    static String request(@V("topic") String topic, @V("audience") String audience, @V("style") String style) {
+    static String request(String topic, String audience, String style) {
         return "Write a story about " + topic + " in " + style + " style for " + audience + " audience.";
     }
 }

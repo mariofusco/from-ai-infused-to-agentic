@@ -4,7 +4,7 @@ import dev.langchain4j.agent.tool.Tool;
 import dev.langchain4j.service.UserMessage;
 import io.quarkiverse.langchain4j.RegisterAiService;
 
-@RegisterAiService(chatMemoryProviderSupplier = RegisterAiService.NoChatMemoryProviderSupplier.class)
+@RegisterAiService
 public interface AudienceEditor {
 
     @UserMessage("""

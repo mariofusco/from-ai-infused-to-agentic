@@ -15,10 +15,10 @@ public interface StyleReviewLoopAgent {
                     @SubAgent(type = StyleEditor.class, outputName = "story")
             }
     )
-    String reviewAndScore(@V("story") String story, @V("style") String style);
+    String reviewAndScore(String story, String style);
 
     @ExitCondition
-    static boolean exit(@V("score") double score) {
+    static boolean exit(double score) {
         return score >= 0.8;
     }
 }

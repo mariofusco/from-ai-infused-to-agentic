@@ -3,7 +3,7 @@ package dev.langchain4j.quarkus.agentic.talk.stage1;
 import dev.langchain4j.service.UserMessage;
 import io.quarkiverse.langchain4j.RegisterAiService;
 
-@RegisterAiService(chatMemoryProviderSupplier = RegisterAiService.NoChatMemoryProviderSupplier.class)
+@RegisterAiService(modelName = "style")
 public interface StyleEditor {
 
     @UserMessage("""
