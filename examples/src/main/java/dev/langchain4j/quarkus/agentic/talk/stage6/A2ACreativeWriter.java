@@ -6,5 +6,5 @@ import dev.langchain4j.service.V;
 public interface A2ACreativeWriter {
 
     @A2AClientAgent(a2aServerUrl = "http://localhost:8081", outputName = "story")
-    String generateStory(@V("topic") String topic);
+    String generateStory(String topic);
 }

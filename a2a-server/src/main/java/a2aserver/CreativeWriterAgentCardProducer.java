@@ -21,7 +21,7 @@ public class CreativeWriterAgentCardProducer {
         return new AgentCard.Builder()
                 .name("Creative Writer")
                 .description("Generate a story based on the given topic")
-                .url("http://localhost:8080")
+                .url("http://localhost:8081")
                 .version("1.0.0")
                 .protocolVersion("1.0.0")
                 .capabilities(new AgentCapabilities.Builder()
@@ -40,7 +40,7 @@ public class CreativeWriterAgentCardProducer {
                 .protocolVersion("0.3.0")
                 .preferredTransport(TransportProtocol.JSONRPC.asString())
                 .additionalInterfaces(List.of(
-                        new AgentInterface(TransportProtocol.JSONRPC.asString(), "http://localhost:8080")))
+                        new AgentInterface(TransportProtocol.JSONRPC.asString(), "http://localhost:8081")))
                 .build();
     }
 }
