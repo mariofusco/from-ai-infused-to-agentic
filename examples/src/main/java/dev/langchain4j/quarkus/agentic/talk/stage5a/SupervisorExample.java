@@ -6,8 +6,6 @@ import io.quarkus.runtime.QuarkusApplication;
 import jakarta.enterprise.context.control.ActivateRequestContext;
 import jakarta.inject.Inject;
 
-import java.io.IOException;
-
 @ActivateRequestContext
 public class SupervisorExample implements QuarkusApplication {
 

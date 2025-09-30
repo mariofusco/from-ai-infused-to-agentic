@@ -4,7 +4,6 @@ import dev.langchain4j.agentic.Agent;
 import dev.langchain4j.agentic.declarative.ChatModelSupplier;
 import dev.langchain4j.model.chat.ChatModel;
 import dev.langchain4j.service.UserMessage;
-import dev.langchain4j.service.V;
 import io.quarkiverse.langchain4j.ModelName;
 import io.quarkus.arc.Arc;
 

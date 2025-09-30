@@ -3,7 +3,6 @@ package dev.langchain4j.quarkus.agentic.talk.stage5b;
 import dev.langchain4j.agentic.declarative.ExitCondition;
 import dev.langchain4j.agentic.declarative.LoopAgent;
 import dev.langchain4j.agentic.declarative.SubAgent;
-import dev.langchain4j.service.V;
 
 public interface StyleReviewLoopAgent {
 

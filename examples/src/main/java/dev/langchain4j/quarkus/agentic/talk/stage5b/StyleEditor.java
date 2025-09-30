@@ -1,10 +1,9 @@
-package dev.langchain4j.quarkus.agentic.talk.stage5a;
+package dev.langchain4j.quarkus.agentic.talk.stage5b;
 
 import dev.langchain4j.agentic.Agent;
 import dev.langchain4j.agentic.declarative.ChatModelSupplier;
 import dev.langchain4j.model.chat.ChatModel;
 import dev.langchain4j.service.UserMessage;
-import dev.langchain4j.service.V;
 import io.quarkiverse.langchain4j.ModelName;
 import io.quarkus.arc.Arc;
 
@@ -17,7 +16,7 @@ public interface StyleEditor {
                 The story is "{story}".
                 """)
     @Agent("Edit a story to better fit a given style")
-    String editStoryInStyle(String story,String style);
+    String editStoryInStyle(String story, String style);
 
     @ChatModelSupplier
     static ChatModel chatModel() {

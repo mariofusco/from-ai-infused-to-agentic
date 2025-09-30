@@ -4,23 +4,22 @@ import dev.langchain4j.agentic.Agent;
 import dev.langchain4j.agentic.declarative.ChatModelSupplier;
 import dev.langchain4j.model.chat.ChatModel;
 import dev.langchain4j.service.UserMessage;
-import dev.langchain4j.service.V;
 import io.quarkiverse.langchain4j.ModelName;
 import io.quarkus.arc.Arc;
 
-public interface StyleEditor {
+public interface CreativeWriter {
 
     @UserMessage("""
-                You are a professional editor.
-                Analyze and rewrite the following story to better fit and be more coherent with the {style} style.
+                You are a creative writer.
+                Generate a draft of a story long no more than 3 sentences around the given topic.
                 Return only the story and nothing else.
-                The story is "{story}".
+                The topic is {topic}.
                 """)
-    @Agent("Edit a story to better fit a given style")
-    String editStoryInStyle(String story, String style);
+    @Agent("Generate a story based on the given topic")
+    String generateStory(String topic);
 
     @ChatModelSupplier
     static ChatModel chatModel() {
-        return Arc.container().instance(ChatModel.class, ModelName.Literal.of("style")).get();
+        return Arc.container().instance(ChatModel.class, ModelName.Literal.of("creative")).get();
     }
 }
